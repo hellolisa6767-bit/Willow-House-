@@ -1,0 +1,210 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Willow House — Preview</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+<style>body{margin:0}.ah{--navy:#0c1b3a;--px:0;--py:0;position:relative;min-height:100vh;color:#fff;font-family:"Inter","Helvetica Neue",Arial,sans-serif;background:#17315c}
+.ah *{box-sizing:border-box}
+.ah a{color:inherit;text-decoration:none}
+.ah :focus-visible{outline:2px solid #fff;outline-offset:3px}
+.ah-bg{position:fixed;inset:-4%;z-index:0;transform:translate3d(calc(var(--px)*-28px),calc(var(--py)*-18px),0);transition:transform .9s cubic-bezier(.22,1,.36,1)}
+.ah-bg img{width:100%;height:100%;object-fit:cover;display:block;animation:ahzoom 18s ease-in-out infinite alternate}
+@keyframes ahzoom{to{transform:scale(1.08)}}
+.ah-ov{position:fixed;inset:0;z-index:1;background:linear-gradient(90deg,rgba(150,195,245,.5),rgba(110,165,230,.18) 38%,rgba(20,45,95,0) 62%),linear-gradient(180deg,rgba(60,110,190,.12),rgba(8,20,48,0) 35%,rgba(8,20,48,.72)),radial-gradient(120% 90% at 50% 40%,transparent 55%,rgba(6,16,40,.55))}
+.ah-grain{position:fixed;inset:0;z-index:2;pointer-events:none;opacity:.07;mix-blend-mode:overlay;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+.ah-in{position:relative;z-index:3;min-height:100vh;padding:28px clamp(24px,4.5vw,72px) 32px;display:flex;flex-direction:column}
+.ah-main{flex:1;display:flex;flex-direction:column}
+.ah-r{opacity:0;filter:blur(12px);transform:translateY(30px);animation:ahup 1.1s cubic-bezier(.22,1,.36,1) forwards;animation-delay:var(--d,0s)}
+.ah-hd.ah-r{transform:translateY(-26px)}
+@keyframes ahup{to{opacity:1;filter:blur(0);transform:none}}
+.ah-hd{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:12px}
+.ah-logo{font-size:26px;font-weight:600;letter-spacing:-.03em}
+.ah-nav{position:relative;display:flex;padding:5px;border-radius:14px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.28);backdrop-filter:blur(14px)}
+.ah-pill{position:absolute;top:5px;bottom:5px;left:0;border-radius:10px;background:var(--navy);transition:transform .55s cubic-bezier(.22,1,.36,1),width .55s cubic-bezier(.22,1,.36,1),opacity .3s}
+.ah-nav a{position:relative;z-index:1;padding:10px 20px;font-size:13.5px}
+.ah-pv{justify-self:end;position:relative;overflow:hidden;display:inline-flex;align-items:center;gap:10px;padding:12px 20px;border-radius:12px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.7);backdrop-filter:blur(10px);font-size:13.5px;transition:color .45s}
+.ah-pv::before{content:"";position:absolute;inset:0;background:#fff;transform:translateX(-101%);transition:transform .55s cubic-bezier(.22,1,.36,1)}
+.ah-pv>*{position:relative}
+.ah-pv:hover{color:var(--navy)}.ah-pv:hover::before{transform:none}
+.ah-hero{flex:1;display:flex;align-items:flex-start;padding-top:clamp(28px,7vh,86px)}
+.ah-txt{max-width:560px;transform:translate3d(calc(var(--px)*16px),calc(var(--py)*10px),0);transition:transform .9s cubic-bezier(.22,1,.36,1)}
+.ah-eye{display:flex;align-items:center;gap:12px;font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;margin-bottom:22px}
+.ah-eye i{display:block;width:34px;height:1px;background:#fff}
+.ah h1{margin:0;font-weight:400;line-height:.8}
+.ah-t1{display:block;font-size:clamp(64px,9.2vw,148px);font-weight:700;letter-spacing:-.045em}
+.ah-t2{display:block;font-family:"Playfair Display",Georgia,serif;font-size:clamp(78px,11.6vw,188px);font-weight:500;letter-spacing:-.04em;color:var(--navy);margin-top:.04em;padding-bottom:.08em}
+.ah h1.sm .ah-t1{font-size:clamp(44px,5.4vw,84px)}.ah h1.sm .ah-t2{font-size:clamp(56px,7vw,110px)}
+.ah-p{max-width:340px;margin:28px 0 0;font-size:14px;line-height:1.6;color:rgba(255,255,255,.92)}
+.ah-cta{position:relative;margin-top:30px;display:inline-flex;align-items:center;justify-content:space-between;min-width:250px;padding-bottom:12px;font-size:15px;font-weight:500}
+.ah-cta::before,.ah-cta::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:1px;background:rgba(255,255,255,.7)}
+.ah-cta::after{background:var(--navy);height:2px;transform:scaleX(0);transform-origin:left;transition:transform .6s cubic-bezier(.22,1,.36,1)}
+.ah-cta:hover::after{transform:scaleX(1)}
+.ah-cta svg{transition:transform .45s cubic-bezier(.22,1,.36,1)}.ah-cta:hover svg{transform:translateX(6px)}
+.ah-bt{display:grid;grid-template-columns:1fr auto 1fr;align-items:end;gap:24px}
+.ah-th{position:relative;justify-self:start;width:210px;height:136px;border-radius:18px;overflow:hidden;border:1px solid rgba(255,255,255,.35)}
+.ah-th img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 1.6s cubic-bezier(.22,1,.36,1)}.ah-th:hover img{transform:scale(1.12)}
+.ah-th em{position:absolute;left:10px;bottom:10px;font-style:normal;font-size:11px;padding:5px 11px;border-radius:99px;background:rgba(12,27,58,.78);opacity:0;transform:translateY(8px);transition:all .5s cubic-bezier(.22,1,.36,1)}
+.ah-th:hover em,.ah-th:focus-visible em{opacity:1;transform:none}
+.ah-cur{display:inline-flex;align-items:center;gap:9px;padding:8px 15px;border-radius:99px;font-size:11.5px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);backdrop-filter:blur(10px)}
+.ah-dot{width:7px;height:7px;border-radius:50%;background:#fff;box-shadow:0 0 10px 2px rgba(255,255,255,.8);animation:ahp 2.2s ease-in-out infinite}
+@keyframes ahp{50%{opacity:.35;transform:scale(.7)}}
+.ah-sc{position:absolute;right:26px;top:50vh;z-index:4;display:flex;flex-direction:column;align-items:center;gap:12px;font-size:10px;letter-spacing:.2em;text-transform:uppercase;writing-mode:vertical-rl}
+.ah-ln{position:relative;width:1px;height:64px;background:rgba(255,255,255,.3);overflow:hidden}
+.ah-ln::after{content:"";position:absolute;left:0;top:-40%;width:100%;height:40%;background:#fff;animation:ahl 2.2s cubic-bezier(.65,0,.35,1) infinite}
+@keyframes ahl{to{top:100%}}
+.ah-pg{display:grid;grid-template-columns:minmax(260px,420px) minmax(0,1fr);gap:clamp(28px,5vw,72px);padding:clamp(28px,6vh,64px) clamp(0px,3vw,48px) 24px 0;align-items:start}
+.ah-side{position:sticky;top:24px}
+.ah-body{display:flex;flex-direction:column;gap:20px}
+.ah-glass{background:linear-gradient(120deg,rgba(12,27,58,.74),rgba(12,27,58,.5));border:1px solid rgba(255,255,255,.2);border-radius:20px;backdrop-filter:blur(18px);box-shadow:inset 0 1px 0 rgba(255,255,255,.25),0 14px 34px rgba(5,14,36,.3)}
+.ah-pad{padding:24px}
+.ah-pad h3,.ah-cb h3{margin:0 0 6px;font-family:"Playfair Display",Georgia,serif;font-weight:500;font-size:24px}
+.meta{font-size:12px;color:rgba(255,255,255,.7)}
+.ah-filters,.ah-form{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.ah-filters{padding:20px;grid-template-columns:repeat(4,1fr)}
+.ah label{display:flex;flex-direction:column;gap:6px;font-size:12px;color:rgba(255,255,255,.8)}
+.ah .wide{grid-column:1/-1}
+.ah input,.ah select,.ah textarea{font:inherit;font-size:14px;color:#fff;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.3);border-radius:10px;padding:10px 12px;color-scheme:dark;width:100%}
+.ah select option{color:#0c1b3a;background:#fff}
+.ah input[type=range]{padding:0;accent-color:#fff}
+.btn{display:inline-flex;justify-content:center;align-items:center;padding:12px 22px;border-radius:12px;border:0;background:#fff;color:var(--navy);font:inherit;font-size:13.5px;font-weight:600;cursor:pointer;transition:transform .4s cubic-bezier(.22,1,.36,1),background .3s}
+.btn:hover{transform:translateY(-3px);background:#e8f1ff}.btn:disabled{opacity:.6;cursor:wait}
+.ah-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px}
+.ah-grid.t{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.ah-card{overflow:hidden;display:flex;flex-direction:column;transition:transform .5s cubic-bezier(.22,1,.36,1)}
+.ah-card:hover{transform:translateY(-5px)}.ah-card.off{opacity:.55}
+.ah-card img{width:100%;height:170px;object-fit:cover;display:block}
+.ah-cb{padding:18px;display:flex;flex-direction:column;gap:8px;flex:1}.ah-cb p{margin:0;font-size:13px;line-height:1.5}
+.ah-row{margin-top:auto;padding-top:10px;display:flex;align-items:center;gap:10px}
+.ah-row b{margin-right:auto;font-size:18px}.ah-row small{font-size:11px;font-weight:400;opacity:.7}
+.tag{font-size:11px;padding:4px 10px;border-radius:99px;border:1px solid rgba(255,255,255,.45)}
+.ah-msg{margin:0;font-size:13px}.ah-msg.err{color:#ffb4b4}
+.ah-sum{padding:12px 14px;border-radius:10px;background:rgba(255,255,255,.08);font-size:14px}
+.ah-contact{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.5fr);gap:18px;align-items:start}
+.ah-faq{padding:8px 24px}
+.ah-faq details{border-bottom:1px solid rgba(255,255,255,.15);padding:16px 0}.ah-faq details:last-child{border:0}
+.ah-faq summary{cursor:pointer;font-weight:500;font-size:15px;list-style:none;display:flex;justify-content:space-between;gap:12px}
+.ah-faq summary::after{content:"+";transition:transform .4s cubic-bezier(.22,1,.36,1)}.ah-faq details[open] summary::after{transform:rotate(45deg)}
+.ah-faq p{margin:10px 0 0;font-size:13.5px;line-height:1.6;color:rgba(255,255,255,.85)}
+.ah-h2{margin:12px 0 0;font-family:"Playfair Display",Georgia,serif;font-weight:500;font-size:28px}
+.ah blockquote{margin:0;padding:20px}.ah blockquote p{margin:0 0 14px;font-size:14px;line-height:1.6}.ah blockquote footer{font-size:12px;color:rgba(255,255,255,.75)}
+@media(max-width:1024px){
+.ah-hd{grid-template-columns:1fr auto}.ah-nav{grid-row:2;grid-column:1/-1;justify-self:center;max-width:100%;overflow-x:auto}
+.ah-pg{grid-template-columns:1fr;padding-right:0}.ah-side{position:static}
+.ah-filters{grid-template-columns:repeat(2,1fr)}.ah-sc{display:none}
+.ah-bt{grid-template-columns:1fr auto}.ah-bt>span{display:none}
+}
+@media(max-width:640px){
+.ah-in{padding-top:20px}.ah-logo{font-size:21px}.ah-nav a{padding:9px 13px}.ah-pv{padding:10px 14px}
+.ah-bg img{object-position:68% center}
+.ah-hero{min-height:620px;padding-top:44px}
+.ah-t1{font-size:clamp(60px,19vw,92px)}.ah-t2{font-size:clamp(74px,23vw,112px)}
+.ah-bt{grid-template-columns:1fr}.ah-th{width:100%;height:150px}
+.ah-form,.ah-contact{grid-template-columns:1fr}.ah-contact{display:flex;flex-direction:column}
+}
+@media(prefers-reduced-motion:reduce){.ah *,.ah *::before,.ah *::after{animation:none!important;transition-duration:.01ms!important}.ah-r{opacity:1;filter:none;transform:none}}
+
+/* ===== Home sections (palette: #0B1B33 #142B49 #A8C7E8 #EAF2FA #FFFFFF #E7C65A) ===== */
+.ah-herowrap{flex:1 0 auto;display:flex;flex-direction:column;min-height:calc(100vh - 118px)}
+.hs-sec{--pad:clamp(24px,4.5vw,72px);margin-inline:calc(-1*var(--pad));padding:clamp(72px,9vw,120px) var(--pad);position:relative}
+.hs-sec:last-child{margin-bottom:-32px}
+.hs-icy{background:#EAF2FA;color:#0B1B33}.hs-white{background:#fff;color:#0B1B33}.hs-navy{background:#142B49;color:#fff}
+.hs-wrap{max-width:1200px;margin:0 auto}
+.hs-two{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,96px);align-items:center}
+.hs-eye{display:flex;align-items:center;gap:12px;margin:0 0 20px;font-size:12px;font-weight:600;letter-spacing:.2em}
+.hs-eye i{width:32px;height:2px;background:#E7C65A}
+.hs-navy .hs-eye{color:#E7C65A}
+.hs-h{margin:0 0 20px;font-family:"Playfair Display",Georgia,serif;font-weight:500;font-size:clamp(32px,4.4vw,56px);line-height:1.1;letter-spacing:-.01em;color:inherit}
+.hs-lead{margin:0 0 28px;max-width:560px;font-size:16.5px;line-height:1.7;color:#142B49}
+.hs-navy .hs-lead{color:#EAF2FA}
+.hs-head{max-width:680px;margin-bottom:clamp(36px,5vw,56px)}.hs-head .hs-lead{margin:0}
+.hs-photo{overflow:hidden;border-radius:6px;border:1px solid rgba(11,27,51,.12);background:#A8C7E8}
+.hs-photo img{display:block;width:100%;height:100%;object-fit:cover}
+.hs-photo.tall{aspect-ratio:4/5}.hs-photo.r43{aspect-ratio:4/3}.hs-photo.r34{aspect-ratio:3/4}
+.hs-three{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,3vw,40px)}
+.hs-card h3{margin:22px 0 10px;font-family:"Playfair Display",Georgia,serif;font-weight:500;font-size:26px}
+.hs-card p{margin:0 0 16px;font-size:15px;line-height:1.65;color:#142B49}
+.hs-navy .hs-card p{color:#EAF2FA}.hs-navy .hs-card h3{padding-top:14px;border-top:2px solid #E7C65A;display:inline-block}
+.hs-navy .hs-photo{border-color:rgba(168,199,232,.3)}
+.hs-link{display:inline-flex;align-items:center;gap:10px;padding-bottom:4px;font-size:15px;font-weight:600;color:#0B1B33;border-bottom:2px solid #E7C65A;transition:gap .3s ease,border-color .3s}
+.hs-link.sm{font-size:14px}.hs-link:hover{gap:16px;border-color:#0B1B33}
+.hs-cta{margin-top:clamp(36px,5vw,56px);display:flex;justify-content:center}
+.hs-btn{display:inline-flex;padding:15px 30px;border-radius:6px;border:1.5px solid #0B1B33;font-size:15px;font-weight:600;color:#0B1B33;transition:background .3s,color .3s}
+.hs-btn:hover{background:#0B1B33;color:#fff}
+.hs-btn.solid{background:#0B1B33;color:#fff}.hs-btn.solid:hover{background:#142B49}
+.hs-btn.gold{background:#E7C65A;border-color:#E7C65A;color:#0B1B33}.hs-btn.gold:hover{background:#fff;border-color:#fff}
+.hs-unwind{--pad:clamp(24px,4.5vw,72px);position:relative;margin-inline:calc(-1*var(--pad));min-height:clamp(480px,70vh,720px);display:flex;align-items:flex-end;padding:var(--pad)}
+.hs-unwind>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hs-panel{position:relative;max-width:520px;padding:clamp(28px,4vw,48px);background:#EAF2FA;color:#0B1B33;border-radius:6px;border:1px solid rgba(11,27,51,.12)}
+.hs-panel .hs-h{font-size:clamp(28px,3.4vw,42px)}
+.hs-quote{margin:0;padding:32px;background:#fff;border:1px solid rgba(11,27,51,.14);border-radius:6px}
+.hs-quote span{display:block;font-family:"Playfair Display",Georgia,serif;font-size:56px;line-height:.7;color:#E7C65A}
+.hs-quote blockquote{margin:16px 0 20px;font-family:"Playfair Display",Georgia,serif;font-size:20px;line-height:1.5;color:#0B1B33}
+.hs-quote figcaption{font-size:12px;font-weight:600;letter-spacing:.08em;color:#142B49}
+.hs-note{margin:24px 0 0;font-size:13px;color:#142B49}
+.hs-sec :focus-visible,.hs-unwind :focus-visible{outline:2px solid #0B1B33;outline-offset:4px}.hs-navy :focus-visible{outline-color:#E7C65A}
+@media(max-width:900px){.hs-two{grid-template-columns:1fr}.hs-three{grid-template-columns:1fr 1fr}.hs-photo.tall{aspect-ratio:4/3}}
+@media(max-width:600px){.hs-three{grid-template-columns:1fr}.ah-herowrap{min-height:auto}}
+@media(prefers-reduced-motion:reduce){.hs-link,.hs-btn{transition:none}}
+</style></head><body>
+<div class="ah"><div class="ah-bg"><img src="https://images.unsplash.com/photo-1755103173145-b307b0082d54?auto=format&fit=crop&q=90&w=2400" alt=""></div><div class="ah-ov"></div><div class="ah-grain"></div>
+<div class="ah-in"><header class="ah-hd ah-r" style="--d:.1s"><a href="#/" class="ah-logo">Willow House</a>
+<nav class="ah-nav"><span class="ah-pill"></span><a href="#/">Home</a><a href="#/suites">Suites</a><a href="#/faqs">FAQs</a><a href="#/contact">Contact</a></nav>
+<a href="#/reservation" class="ah-pv"><span>Make Reservations</span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></header>
+<main id="main" class="ah-main"></main></div>
+<div class="ah-sc"><span>Scroll</span><div class="ah-ln"></div></div></div>
+<script>const $=s=>document.querySelector(s), main=$("#main");
+const A="https://images.unsplash.com/photo-1755103173145-b307b0082d54?auto=format&fit=crop&q=80&w=1000",B="https://images.unsplash.com/photo-1753941980183-2ea7bd7cfce2?auto=format&fit=crop&q=80&w=1000";
+const ROOMS=[[1,"Willow Studio","Room",180,2,32,6,A,"A calm studio with floor-to-ceiling glazing and a deep soaking tub."],[2,"Garden Room","Room",230,2,38,5,B,"Opens onto a private planted terrace, ideal for slow mornings."],[3,"Courtyard Suite","Suite",340,3,52,4,A,"Separate lounge, oak writing desk and a walk-in dressing room."],[4,"Skyline Suite","Suite",460,3,64,3,B,"Corner suite on the upper floors with panoramic city views."],[5,"Family Residence","Suite",520,5,88,2,A,"Two bedrooms, a full kitchen and a sunlit living space."],[6,"Willow Penthouse","Penthouse",980,4,140,1,B,"Our signature residence with a rooftop terrace and private butler."]].map(([id,name,type,price,cap,size,units,img,d])=>({id,name,type,price,cap,size,units,img,d}));
+const iso=(o=0)=>new Date(Date.now()+o*864e5).toISOString().slice(0,10);
+const RES=[{room:6,a:iso(0),b:iso(14)},{room:5,a:iso(0),b:iso(7)},{room:5,a:iso(0),b:iso(7)}];
+const nights=(a,b)=>a&&b?Math.round((new Date(b)-new Date(a))/864e5):0,money=n=>"$"+Number(n).toLocaleString();
+const av=(r,a,b)=>{if(nights(a,b)<1)return{};const left=Math.max(0,r.units-RES.filter(x=>x.room===r.id&&x.a<b&&x.b>a).length);return{left,ok:left>0}};
+const ARW='<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+const H=(e,a,b,p,sm,x="")=>`<div class="ah-txt"><div class="ah-eye ah-r" style="--d:.3s"><i></i><span>${e}</span></div><h1 class="ah-r${sm?" sm":""}" style="--d:.45s"><span class="ah-t1">${a}</span><span class="ah-t2">${b}</span></h1><p class="ah-p ah-r" style="--d:.65s">${p}</p>${x}</div>`;
+const S=(h,body)=>`<div class="ah-pg"><div class="ah-side">${H(...h,true)}</div><div class="ah-body ah-r" style="--d:.8s">${body}</div></div>`;
+const opts=n=>[1,2,3,4,5].map(g=>`<option ${g==n?"selected":""}>${g}</option>`).join("");
+
+function home(){main.innerHTML=`<div class="ah-hero">${H("Architectural living","Elevated","Living","Carefully selected suites made for guests who value beautiful spaces, quiet surroundings and effortless city living.",0,`<a href="#/suites" class="ah-cta ah-r" style="--d:.8s"><span>Explore Suites</span>${ARW}</a>`)}</div><div class="ah-bt ah-r" style="--d:1s"><a href="#/suites" class="ah-th"><img src="${B}" alt=""><em>Featured suite</em></a><div class="ah-cur"><span class="ah-dot"></span>${ROOMS.length} curated suites</div><span></span></div>`}
+
+function suites(){const f={checkIn:"",checkOut:"",guests:2,max:1000,type:""};
+main.innerHTML=S(["Rooms & suites","Our","Suites","Filter by dates, guests and nightly budget. Availability updates as you choose."],`<form class="ah-filters ah-glass" id="ff"><label>Check-in<input type="date" name="checkIn" min="${iso()}"></label><label>Check-out<input type="date" name="checkOut" min="${iso()}"></label><label>Guests<select name="guests">${opts(2)}</select></label><label>Type<select name="type"><option value="">All</option><option>Room</option><option>Suite</option><option>Penthouse</option></select></label><label class="wide"><span id="bl">Max budget per night: $1,000</span><input type="range" name="max" min="150" max="1000" step="10" value="1000"></label></form><p class="ah-msg" id="em"></p><div class="ah-grid" id="gr"></div>`);
+const grid=()=>{const rs=ROOMS.filter(r=>r.cap>=f.guests&&r.price<=f.max&&(!f.type||r.type==f.type));$("#em").textContent=rs.length?"":"No rooms match. Try a higher budget or fewer guests.";$("#bl").textContent="Max budget per night: "+money(f.max);const dOk=nights(f.checkIn,f.checkOut)>0;
+$("#gr").innerHTML=rs.map(r=>{const a=av(r,f.checkIn,f.checkOut);return`<article class="ah-card ah-glass${a.ok===false?" off":""}"><img src="${r.img}" alt="${r.name}"><div class="ah-cb"><h3>${r.name}</h3><p class="meta">${r.type} · ${r.size} m² · up to ${r.cap} guests</p><p>${r.d}</p><div class="ah-row"><b>${money(r.price)}<small> / night</small></b>${a.ok===false?'<span class="tag">Sold out</span>':`${dOk&&a.left<=2?`<span class="tag">${a.left} left</span>`:""}<a class="btn" href="#/reservation?room=${r.id}&guests=${f.guests}${dOk?`&checkIn=${f.checkIn}&checkOut=${f.checkOut}`:""}">Reserve</a>`}</div></div></article>`}).join("")};
+$("#ff").oninput=e=>{f[e.target.name]=e.target.name=="max"?+e.target.value:e.target.value;grid()};grid()}
+
+function resv(sp){const f={room:+sp.get("room")||0,checkIn:sp.get("checkIn")||"",checkOut:sp.get("checkOut")||"",guests:+sp.get("guests")||2};
+main.innerHTML=S(["Reservation","Book your","Stay","Pick your dates and a room. Only rooms free for those dates can be selected."],`<form class="ah-form ah-glass ah-pad" id="rf"><label>Check-in<input type="date" name="checkIn" required min="${iso()}" value="${f.checkIn}"></label><label>Check-out<input type="date" name="checkOut" required min="${iso()}" value="${f.checkOut}"></label><label>Guests<select name="guests">${opts(f.guests)}</select></label><label>Room<select name="room" required id="rs"></select></label><label>Full name<input name="name" required></label><label>Email<input name="email" type="email" required></label><label class="wide">Phone<input></label><label class="wide">Requests<textarea rows="3"></textarea></label><div class="wide ah-sum" id="sm"></div><p class="ah-msg err wide" id="er"></p><button class="btn wide">Confirm reservation</button></form>`);
+const ref=()=>{$("#rs").innerHTML='<option value="">Select a room</option>'+ROOMS.filter(r=>r.cap>=f.guests).map(r=>{const a=av(r,f.checkIn,f.checkOut);return`<option value="${r.id}" ${a.ok===false?"disabled":""} ${r.id==f.room?"selected":""}>${r.name} — ${money(r.price)}/night${a.ok===false?" (sold out)":""}</option>`}).join("");
+const r=ROOMS.find(x=>x.id==f.room),n=nights(f.checkIn,f.checkOut);$("#sm").innerHTML=r&&n>0?`${n} night${n>1?"s":""} × ${money(r.price)} = <b>${money(n*r.price)}</b>`:n>0?"Select a room to see your total.":"Choose valid dates to see availability."};
+$("#rf").oninput=e=>{if(e.target.name in f){f[e.target.name]=e.target.name=="room"||e.target.name=="guests"?+e.target.value:e.target.value;ref()}};ref();
+$("#rf").onsubmit=e=>{e.preventDefault();const r=ROOMS.find(x=>x.id==f.room),n=nights(f.checkIn,f.checkOut),a=r&&av(r,f.checkIn,f.checkOut);
+if(n<1)return $("#er").textContent="Check-out must be after check-in.";if(!r||!a.ok)return $("#er").textContent="Please select an available room.";
+RES.push({room:r.id,a:f.checkIn,b:f.checkOut});main.innerHTML=S(["Confirmed","Thank","You","Your stay is booked. A confirmation will follow by email."],`<div class="ah-glass ah-pad"><h3>${r.name}</h3><p>${f.checkIn} → ${f.checkOut} · ${n} nights · ${f.guests} guests</p><p><b>Total ${money(n*r.price)}</b></p><a class="btn" href="#/">Back home</a></div>`)}}
+
+function faqs(){const Q=[["What are check-in and check-out times?","Check-in opens at 3 pm and check-out is at 11 am."],["Can I change or cancel my reservation?","Contact us at least 72 hours before arrival to change dates or cancel without charge."],["Is breakfast included?","Yes. A seasonal breakfast is served daily in the courtyard or delivered to your suite."],["Do you welcome children and pets?","Children are welcome in our Suites and Residences. Small dogs are welcome by prior arrangement."],["Is parking available?","Secure underground parking and EV charging are available for guests."]],T=[["The quietest night’s sleep I have had in any city. Every detail felt considered.","Amelia R.","Skyline Suite"],["Effortless from booking to checkout. The staff remembered everything.","Daniel K.","Courtyard Suite"],["We came for a weekend and extended twice. The penthouse terrace is unforgettable.","Sofia & Marc","Willow Penthouse"]];
+main.innerHTML=S(["Good to know","Guest","FAQs","Answers to the questions guests ask most, and a few words from those who have stayed."],`<div class="ah-faq ah-glass">${Q.map(([q,a])=>`<details><summary>${q}</summary><p>${a}</p></details>`).join("")}</div><h2 class="ah-h2">Guest testimonials</h2><div class="ah-grid t">${T.map(([t,n,r])=>`<blockquote class="ah-glass"><p>${t}</p><footer><b>${n}</b> · ${r}</footer></blockquote>`).join("")}</div>`)}
+
+function contact(){main.innerHTML=S(["Contact","Get in","Touch","Questions about a stay, an event or a special request? Our team replies within one working day."],`<div class="ah-contact"><div class="ah-glass ah-pad"><h3>Willow House</h3><p>12 Willow Lane, Old Town<br>+00 000 000 0000<br>stay@willowhouse.example</p><p class="meta">Front desk open 24 hours</p></div><form class="ah-form ah-glass ah-pad" id="cf"><label>Name<input required></label><label>Email<input type="email" required></label><label class="wide">Message<textarea rows="4" required></textarea></label><p class="ah-msg wide" id="ok"></p><button class="btn wide">Send message</button></form></div>`);
+$("#cf").onsubmit=e=>{e.preventDefault();e.target.reset();$("#ok").textContent="Thank you — your message has been sent."}}
+
+const NAVP=["/","/suites","/faqs","/contact"];
+function route(){const [p,q=""]=(location.hash.slice(1)||"/").split("?");({"/":home,"/suites":suites,"/faqs":faqs,"/contact":contact,"/reservation":()=>resv(new URLSearchParams(q))}[p]||home)();scrollTo(0,0);pill(NAVP.indexOf(p))}
+function pill(i){const a=document.querySelectorAll(".ah-nav a"),el=$(".ah-pill");a.forEach((x,j)=>j==i?x.setAttribute("aria-current","page"):x.removeAttribute("aria-current"));if(i<0||!a[i]){el.style.opacity=0;return}el.style.opacity=1;el.style.width=a[i].offsetWidth+"px";el.style.transform=`translateX(${a[i].offsetLeft}px)`}
+addEventListener("hashchange",route);addEventListener("resize",route);addEventListener("load",route);
+addEventListener("mousemove",e=>{if(matchMedia("(prefers-reduced-motion: reduce)").matches)return;const s=$(".ah").style;s.setProperty("--px",e.clientX/innerWidth-.5);s.setProperty("--py",e.clientY/innerHeight-.5)});
+
+const IA="https://images.unsplash.com/photo-1755103173145-b307b0082d54?auto=format&fit=crop&q=80&w=1600",IB="https://images.unsplash.com/photo-1753941980183-2ea7bd7cfce2?auto=format&fit=crop&q=80&w=1600";
+const ar=s=>ARW.replace('width="18" height="18"',`width="${s}" height="${s}"`);
+const EY=t=>`<p class="hs-eye"><i></i>${t}</p>`,PH=(s,p,alt="")=>`<img src="${s}" alt="${alt}" style="object-position:${p}" loading="lazy">`;
+const RM=[["Deluxe Room","An inviting retreat with elegant essentials, soft textures, and everything you need for a restful stay.",IB,"20% 50%"],["Garden Suite","A spacious sanctuary inspired by nature, offering a relaxed atmosphere and room to unwind.",IA,"30% 60%"],["Signature Suite","Our distinctive suite experience, combining generous space, refined interiors, and thoughtful finishing touches.",IB,"80% 40%"]];
+const FT=[["Signature Dining","Discover a considered dining experience shaped by inviting surroundings, thoughtful presentation, and memorable moments around the table.",IA,"15% 50%"],["Garden Lounge","Find a quieter pace in a welcoming setting designed for conversation, fresh air, and unhurried afternoons.",IB,"50% 50%"],["Thoughtful Hospitality","Enjoy the little details and attentive service that make your time with us feel effortless.",IA,"85% 50%"]];
+const QT=["A beautifully considered space with a calm atmosphere and thoughtful attention to detail.","The experience felt welcoming, comfortable, and wonderfully unhurried.","A refined setting for a peaceful escape from the everyday."];
+const sections=()=>`<section class="hs-sec hs-icy"><div class="hs-wrap hs-two"><div>${EY("WELCOME TO THE WILLOW HOUSE")}<h2 class="hs-h">Where Every Stay Feels Extraordinary</h2><p class="hs-lead">Discover a considered escape where thoughtful hospitality, beautifully appointed spaces, and moments of quiet luxury come together. At The Willow House, every detail is designed to make you feel at ease.</p><a href="#/story" class="hs-link">Discover Our Story ${ar(16)}</a></div><div class="hs-photo tall">${PH(IB,"40% 50%","The Willow House in natural daylight")}</div></div></section>
+<section class="hs-sec hs-white"><div class="hs-wrap"><div class="hs-head">${EY("YOUR PRIVATE RETREAT")}<h2 class="hs-h">Spaces Made for Slowing Down</h2><p class="hs-lead">Thoughtfully designed rooms and suites bring together refined comfort, considered details, and the quiet luxury of feeling at home.</p></div><div class="hs-three">${RM.map(([n,d,s,p])=>`<article class="hs-card"><div class="hs-photo r43">${PH(s,p,n)}</div><h3>${n}</h3><p>${d}</p><a href="#/suites" class="hs-link sm">Explore Room ${ar(14)}</a></article>`).join("")}</div><div class="hs-cta"><a href="#/suites" class="hs-btn">Explore All Rooms</a></div></div></section>
+<section class="hs-sec hs-navy"><div class="hs-wrap"><div class="hs-head">${EY("MORE THAN A STAY")}<h2 class="hs-h">Experiences Worth Savouring</h2><p class="hs-lead">From memorable dining to peaceful moments of relaxation, discover thoughtful experiences that make every visit feel personal.</p></div><div class="hs-three">${FT.map(([n,d,s,p])=>`<article class="hs-card"><div class="hs-photo r34">${PH(s,p,n)}</div><h3>${n}</h3><p>${d}</p></article>`).join("")}</div><div class="hs-cta"><a href="#/experiences" class="hs-btn gold">Discover Our Experiences</a></div></div></section>
+<section class="hs-unwind">${PH(IA,"50% 55%","Calm architecture and open sky")}<div class="hs-panel">${EY("SLOW DOWN. SETTLE IN.")}<h2 class="hs-h">A Little More Space to Breathe</h2><p class="hs-lead">Step away from the everyday and rediscover the pleasure of taking your time. From quiet mornings to unhurried evenings, The Willow House invites you to find your own rhythm.</p><a href="#/experiences" class="hs-link">Explore the Property ${ar(16)}</a></div></section>
+<section class="hs-sec hs-icy"><div class="hs-wrap"><div class="hs-head">${EY("THE EXPERIENCE, IN THEIR WORDS")}<h2 class="hs-h">Moments That Stay With You</h2></div><div class="hs-three">${QT.map(q=>`<figure class="hs-quote"><span>“</span><blockquote>${q}</blockquote><figcaption>Sample testimonial</figcaption></figure>`).join("")}</div><p class="hs-note">Sample testimonials shown as placeholder content until genuine guest reviews are available.</p><div class="hs-cta"><a href="#/reservation" class="hs-btn solid">Plan Your Stay</a></div></div></section>`;
+function home(){main.innerHTML=`<div class="ah-herowrap"><div class="ah-hero">${H("Architectural living","Elevated","Living","Carefully selected suites made for guests who value beautiful spaces, quiet surroundings and effortless city living.",0,`<a href="#/suites" class="ah-cta ah-r" style="--d:.8s"><span>Explore Suites</span>${ARW}</a>`)}</div><div class="ah-bt ah-r" style="--d:1s"><a href="#/suites" class="ah-th"><img src="${IB}" alt=""><em>Featured suite</em></a><div class="ah-cur"><span class="ah-dot"></span>${ROOMS.length} curated suites</div><span></span></div></div>`+sections()}
+function story(){main.innerHTML=S(["Our story","The Willow","House","A considered escape where thoughtful hospitality and quiet luxury come together."],`<div class="ah-glass ah-pad"><h3>Where every stay feels extraordinary</h3><p>At The Willow House, every detail is designed to make you feel at ease: beautifully appointed spaces, a calm atmosphere and attentive hospitality.</p><p class="meta">Story content is placeholder brand copy. Add the hotel’s history, team and values here.</p><a class="btn" href="#/suites">Explore Suites</a></div>`)}
+function exps(){main.innerHTML=S(["More than a stay","Dining &","Experiences","Thoughtful experiences that make every visit feel personal."],FT.map(([t,d])=>`<div class="ah-glass ah-pad"><h3>${t}</h3><p>${d}</p></div>`).join("")+`<p class="ah-msg">Concept content — facilities, opening hours and services are to be confirmed. <a href="#/contact" style="text-decoration:underline">Contact us</a> for enquiries.</p><a class="btn" href="#/reservation">Plan Your Stay</a>`)}
+const RT={"/":home,"/suites":suites,"/faqs":faqs,"/contact":contact,"/story":story,"/experiences":exps,"/reservation":()=>resv(new URLSearchParams(location.hash.split("?")[1]||""))};
+function route(){const p=(location.hash.slice(1)||"/").split("?")[0];(RT[p]||home)();scrollTo(0,0);pill(NAVP.indexOf(p))}
+route();
+</script></body></html>
